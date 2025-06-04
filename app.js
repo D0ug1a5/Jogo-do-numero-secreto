@@ -25,7 +25,7 @@ if (typeof window !== 'undefined') {
     }
 
     const palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-    alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`);
+    alert(`Isso aí! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`);
 }
 
 if (typeof module !== 'undefined') {
