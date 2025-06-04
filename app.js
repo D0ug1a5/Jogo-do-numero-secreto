@@ -2,12 +2,10 @@ function gerarNumeroSecreto(maximo) {
     return Math.floor(Math.random() * maximo) + 1;
 }
 
-if (typeof window === 'undefined') {
-    module.exports = gerarNumeroSecreto;
-} else {
+if (typeof window !== 'undefined') {
     alert('Boas vindas ao jogo do número secreto');
-    let numeroMaximo = 5000;
-    let numeroSecreto = gerarNumeroSecreto(numeroMaximo);
+    const numeroMaximo = 5000;
+    const numeroSecreto = gerarNumeroSecreto(numeroMaximo);
     console.log(numeroSecreto);
     let chute;
     let tentativas = 1;
@@ -26,6 +24,10 @@ if (typeof window === 'undefined') {
         }
     }
 
-    let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+    const palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
     alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`);
+}
+
+if (typeof module !== 'undefined') {
+    module.exports = gerarNumeroSecreto;
 }
