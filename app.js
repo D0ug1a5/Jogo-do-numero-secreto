@@ -1,14 +1,11 @@
-function gerarNumeroSecreto(maximo) {
-    return Math.floor(Math.random() * maximo) + 1;
-}
+codex/remove-console.log-from-app.js
+alert('Boas vindas ao jogo do número secreto');
+let numeroMaximo = 5000;
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
+let chute;
+let tentativas = 1;
 
-if (typeof window !== 'undefined') {
-    alert('Boas vindas ao jogo do número secreto');
-    const numeroMaximo = 5000;
-    const numeroSecreto = gerarNumeroSecreto(numeroMaximo);
-    console.log(numeroSecreto);
-    let chute;
-    let tentativas = 1;
+main
 
     while (chute != numeroSecreto) {
         chute = prompt(`Escolha um número entre 1 e ${numeroMaximo}`);
